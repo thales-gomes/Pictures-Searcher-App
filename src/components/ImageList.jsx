@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default function ImageList({ images }) {
-  const imageComponent = images.map(image => {
-    return <img key={image.id} src={image.urls.regular} alt={image.alt_description}/>
+  const imageComponent = images.map(({id, urls, alt_description}) => {
+    return <img key={id} src={urls.regular} alt={alt_description}/>
   })
 
   return (
