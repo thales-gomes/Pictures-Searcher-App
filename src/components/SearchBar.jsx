@@ -17,8 +17,8 @@ class SearchBar extends React.Component {
             <label htmlFor="">Image Search</label>
             <input
               type="text"
-              value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })} />
+              value={this.state.term}    
+              onChange={(e) => this.setState({ term: e.target.value })} /> {/* Controled input */}
             </div>
         </form>
       </div>
