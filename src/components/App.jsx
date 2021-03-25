@@ -7,7 +7,7 @@ class App extends React.Component {
 	state = { images: [] };
 
 	onSearchSubmit = async (term) => {
-		const response = await unsplash.get('search/photos', {
+		const response = await unsplash.get('search/photos', {   // axios helper (instead of axios.get, helpername.get)
 			params: { query: term },
 		});
 		this.setState({ images: response.data.results });

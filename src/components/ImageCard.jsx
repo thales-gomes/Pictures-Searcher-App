@@ -3,11 +3,11 @@ import React from "react";
 class ImageCard extends React.Component {
   constructor(props) {
     super(props);
-    this.imageRef = React.createRef();
+    this.imageRef = React.createRef(); // React Ref system to access element info without the need of document selectors
   }
 
   componentDidMount() {
-    this.imageRef.current.addEventListener("load", this.setSpans)
+    this.imageRef.current.addEventListener("load", this.setSpans) // Awaits Image loads to access Height
   }
 
   setSpans = () => {
